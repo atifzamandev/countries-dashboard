@@ -24,3 +24,7 @@ Setup basic scaleable folder structure and clean up boilerplate to have clean co
 ### API Setup
 
 The GraphQL API was configured using GraphQL Client with queries. Implemented useCountries, useCountryMeasure custom hooks enabling reusable data access across components. The solution emphasizes separation of concerns principel isolating data logic from presentation components.
+
+### DataChart
+
+Created data chart component to display country demography based on default parameters. This provides the graphical data visualizations of API data. It is a responsive component to work on different screens.
