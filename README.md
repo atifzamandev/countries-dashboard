@@ -28,3 +28,8 @@ The GraphQL API was configured using GraphQL Client with queries. Implemented us
 ### DataChart
 
 Created data chart component to display country demography based on default parameters. This provides the graphical data visualizations of API data. It is a responsive component to work on different screens.
+
+### Country and Measure Selectors
+
+Added interactive country and measure selectors to visualize demographic data (life expectancy, population, net migration rate) through dynamic charts.
+Œ

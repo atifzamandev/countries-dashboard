@@ -17,7 +17,7 @@ interface DataChartProps {
   measure: string
 }
 
-export default function DataChart({ country, measure }: DataChartProps) {
+const DataChart = ({ country, measure }: DataChartProps) => {
   const {
     data: measureData,
     isLoading,
@@ -58,3 +58,5 @@ export default function DataChart({ country, measure }: DataChartProps) {
     </Box>
   )
 }
+
+export default DataChart
