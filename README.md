@@ -58,3 +58,5 @@ Performed some refactoring for better user experience
 - Further add error boundaries while fetching the data or displaying it.
 - Error component for better error message display.
 - Perform unit testing, component testing and e2e testing with React Testing Library and Cypress
+
+************************** Project Completed **************************
