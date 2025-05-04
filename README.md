@@ -32,4 +32,29 @@ Created data chart component to display country demography based on default para
 ### Country and Measure Selectors
 
 Added interactive country and measure selectors to visualize demographic data (life expectancy, population, net migration rate) through dynamic charts.
-Œ
+
+### Refactoring
+
+Performed some refactoring for better user experience
+
+- Temporarily resolved client-server theme mismatch (requires proper Chakra UI theme configuration for permanent solution)
+- Implemented loading spinner component for better UI display
+- Refactored Dashboard from Home page for cleaner client-side rendering
+
+### Not Implemented
+
+- Used default or basic Chakra UI styling to focus on data visualization.
+- Did not implement year range filters or additional data manipulation.
+- Not implemented Chakra UI 3 properly due to time constraint.
+- Used client-side fetching over SSR for simplicity and remain within the timebox.
+
+### Future Tasks
+
+- Implment Context API for better state management
+- Implement Chakra UI theme and styling.
+- Implement Chakra UI 3 components and their configurations.
+- Improve chart display with tooltip and other features
+- Display flag icons with the dropdown countries list.
+- Further add error boundaries while fetching the data or displaying it.
+- Error component for better error message display.
+- Perform unit testing, component testing and e2e testing with React Testing Library and Cypress

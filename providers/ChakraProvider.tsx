@@ -1,14 +1,27 @@
-"use client"
+'use client'
 
-import { ChakraProvider, defaultSystem } from "@chakra-ui/react"
-import { ThemeProvider } from "next-themes"
+import { ChakraProvider as ChakraUI, defaultSystem } from '@chakra-ui/react'
+import { ThemeProvider } from 'next-themes'
+import { useEffect, useState } from 'react'
 
-export default function RootLayout(props: { children: React.ReactNode }) {
+export default function ChakraProvider({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  const [loaded, setLoaded] = useState(false)
+
+  useEffect(() => {
+    setLoaded(true)
+  }, [])
+
+  if (!loaded) return null
+
   return (
-    <ChakraProvider value={defaultSystem}>
-      <ThemeProvider attribute="class" disableTransitionOnChange>
-        {props.children}
+    <ChakraUI value={defaultSystem}>
+      <ThemeProvider attribute='class' disableTransitionOnChange>
+        {children}
       </ThemeProvider>
-    </ChakraProvider>
+    </ChakraUI>
   )
 }

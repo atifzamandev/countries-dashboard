@@ -8,6 +8,7 @@ import {
   Text,
 } from '@chakra-ui/react'
 import { ChangeEvent } from 'react'
+import LoadingSpinner from './LoadingSpinner'
 
 interface CountrySelectorProps {
   selectedCountry: string
@@ -20,8 +21,8 @@ const CountrySelector = ({
 }: CountrySelectorProps) => {
   const { data: countriesData, isLoading, error } = useCountries()
 
-  if (isLoading) return <Text>Loading...</Text>
-  if (error) return <Text>Error loading data</Text>
+  if (isLoading) return <LoadingSpinner />
+  if (error) return <Text color='red.500'>Error loading data</Text>
   if (!countriesData || countriesData.length === 0)
     return <Text>No countries data available</Text>
 

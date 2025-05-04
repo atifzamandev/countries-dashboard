@@ -1,7 +1,6 @@
-import type { Metadata } from 'next'
-
 import ChakraProvider from '@/providers/ChakraProvider'
 import { ReactQueryProvider } from '@/providers/ReactQueryProvider'
+import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Countries Dashboard',

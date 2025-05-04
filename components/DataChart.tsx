@@ -11,6 +11,7 @@ import {
   XAxis,
   YAxis,
 } from 'recharts'
+import LoadingSpinner from './LoadingSpinner'
 
 interface DataChartProps {
   country: string
@@ -24,8 +25,8 @@ const DataChart = ({ country, measure }: DataChartProps) => {
     error,
   } = useCountryMeasure(country, measure)
 
-  if (isLoading) return <Text>Loading...</Text>
-  if (error) return <Text>Error loading data</Text>
+  if (isLoading) return <LoadingSpinner />
+  if (error) return <Text color='red.500'>Error loading data</Text>
   if (!measureData || measureData.length === 0)
     return <Text>No data available</Text>
 
